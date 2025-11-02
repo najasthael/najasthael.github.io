@@ -3,7 +3,7 @@ from collections import Counter
 import re
 
 class TextAnalyzer:
-    def __init__(self, model_name="fr_core_news_sm"):
+    def __init__(self, model_name="fr_core_news_md"):
         self.text_analisis = spacy.load(model_name)
     
     def analyze_text(self, text):
@@ -48,3 +48,35 @@ class TextAnalyzer:
                 "end": ent.end_char
             })
         return entities
+    
+
+    def get_words_frequency (self, doc, top_n=20):
+        words =[]
+        for token in doc:
+            if not token.is_stop and not token.is_punct and not token.is_space and len(token.text) > 2:
+                words = [token.text.lower()]
+
+
+    
+    def get_pos_distribution(self, doc):
+        pos_tags = []
+        for token in doc:
+            if not token.is_space:
+                pos_tags.append(token.pos_)
+        pos_qtt = Counter(pos_tags)
+        return dict(pos_qtt)
+        
+
+
+    def get_bigrams(self, text, n=2, top_n=10):
+        words = re.findall(r'\b\w+\b', text.lower())
+
+        bigrams = []
+        for i in range(len(words) - n + 1):
+            bigram = words[i:i+n]
+            bigrams.append(' '.join(bigram))
+
+        bigram_freq = Counter(bigrams)
+        return bigram_freq.most_common(top_n)
+
+    
