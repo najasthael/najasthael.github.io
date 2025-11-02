@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naja Ferreira | NLP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            font-weight: 400;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 4rem;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #333;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        /* Skills */
+        .skills {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .skill-category h3 {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .skill-category p {
+            font-family: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #fafafa;
+            border: 1px solid #eee;
+        }
+
+        .project h3 {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .project p {
+            color: #555;
+            margin-bottom: 0.75rem;
+        }
+
+        .tech {
+            font-family: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* Contact */
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+
+        .contact-links a:hover {
+            color: #000;
+            border-bottom-color: #1a1a1a;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e5e5;
+            text-align: center;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 2rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .skills {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Naja Sthael Gonçalves dos Santos Ferreira</h1>
+        <p class="subtitle">Étudiante en Master 2 Industrie de la Langue - Traitement Automatique des Langues</p>
+    </header>
+
+    <section class="about">
+        <h2>À Propos</h2>
+        <p>
+            Étudiante en Master 2 en Traitement Automatique des Langues, spécialisée en NLP et Machine Learning. Expérience pratique en développement Python, analyse de données linguistiques et déploiement de modèles. À la recherche d'un stage pour appliquer mes compétences en ingénierie NLP et contribuer à des projets innovants.
+        </p>
+    </section>
+
+    <section class="skills">
+        <h2>Compétences Techniques</h2>
+        <div class="skill-category">
+            <h3>Langages & Bases de Données</h3>
+            <p>Python · R · SQL · Bash · HTML/JavaScript</p>
+        </div>
+        <div class="skill-category">
+            <h3>Machine Learning & Deep Learning</h3>
+            <p>PyTorch · TensorFlow · Keras · Scikit-learn</p>
+        </div>
+        <div class="skill-category">
+            <h3>NLP & Linguistique Computationnelle</h3>
+            <p>Transformers (Hugging Face) · CamemBERT · Flan-T5 · spaCy · NLTK</p>
+        </div>
+        <div class="skill-category">
+            <h3>Analyse de Données & Visualisation</h3>
+            <p>Power BI · Streamlit · Jupyter Notebook</p>
+        </div>
+        <div class="skill-category">
+            <h3>Outils & Méthodologies</h3>
+            <p>Git/GitHub · VS Code · Web scraping (BeautifulSoup, requests)</p>
+        </div>
+        <div class="skill-category">
+            <h3>Traitement de Données</h3>
+            <p>TEI/XML · JSON · CSV · Excel (TCD, Power Query, formules avancées, openpyxl)</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Projets</h2>
+        <div class="project">
+            <h3><a href="projets/FAQ-Gouv">Fine Tuning de LLM</a></h3>
+            <p>Entraînement de LLM pour une tâche de classification binaire.</p>
+            <p class="tech">Technologies: Python · Transformers · Streamlit</p>
+        </div>
+        <div class="project">
+            <h3><a href="projets/Assistant Q&A">Assistant Q&A Intelligent sur Documents</a></h3>
+            <p>Extraction et analyse de texte avec question-answering par IA.</p>
+            <p class="tech">Technologies: Transformers · spaCy · PyTorch · Streamlit</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <div class="contact-links">
+            <a href="mailto:najasthael@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/naja-sthael-ferreira">LinkedIn</a>
+            <a href="https://github.com/najasthael">GitHub</a>
+            <a href="CV_Naja_Ferreira.pdf">CV</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Grenoble, France</p>
+    </footer>
+</body>
+</html>
