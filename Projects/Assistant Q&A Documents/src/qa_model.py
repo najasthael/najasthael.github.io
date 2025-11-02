@@ -14,7 +14,7 @@ class QAModel:
             context = context[:context_max]
 
 
-        result = self.qa_pipeline(question=question, context=context, context_max=context_max)
+        result = self.qa_pipeline(question=question, context=context)
 
         return {
             "answer": result["answer"],

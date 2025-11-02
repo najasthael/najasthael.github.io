@@ -51,10 +51,13 @@ class TextAnalyzer:
     
 
     def get_words_frequency (self, doc, top_n=20):
-        words.append()
+        words =[]
         for token in doc:
             if not token.is_stop and not token.is_punct and not token.is_space and len(token.text) > 2:
-                words = [token.text.lower()]
+                words.append(token.text.lower())
+        word_freq = Counter(words)
+    
+        return (word_freq.most_common(top_n),)
 
 
     

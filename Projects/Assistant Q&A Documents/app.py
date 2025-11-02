@@ -76,7 +76,7 @@ if file is not None:
         if stl.button("Lancez", type="primary"):
             if question:
                 with stl.spinner("Le système est en train de chercher la réponse."):
-                    result = qa_model.answer_question(question, text)
+                    result = qa.answer_question(question, text)
                     
                     if result['score'] > 0:
                         stl.markdown("###Réponse trouvée:")
@@ -86,8 +86,8 @@ if file is not None:
                         stl.metric("Confiance", f"{reliability:.1f}%")
                         
                         if stl.checkbox("Voir le contexte dans le document"):
-                            debut, fin = result['position']
-                            context = qa_model.answer_context(text, start, end)
+                            start, end = result['start'], result['end']
+                            context = qa.answer_context(text, start, end)
                             
                             stl.markdown("**Extrait du document:**")
                             stl.info(context)
@@ -131,15 +131,15 @@ if file is not None:
         
         stl.markdown("---")
         
-        if analisis['entities'] and len(analisis['entities'][0]) > 0:
+        if analisis['entities'] and len(analisis['entities']) > 0:
             stl.markdown("###Entités nommées détectées")
             
-            entities_chart = visualization.entities_graphs(analisis['entities'][0])
+            entities_chart = visualization.entities_graphs(analisis['entities'])
             if entities_chart:
                 stl.plotly_chart(entities_chart, use_container_width=True)
             
             if stl.checkbox("::Liste complète des entités::"):
-                entities_list = analisis['entities'][0]
+                entities_list = analisis['entities']
                 stl.dataframe(entities_list, use_container_width=True)
         else:
             stl.info("Aucune entité détectée.")
