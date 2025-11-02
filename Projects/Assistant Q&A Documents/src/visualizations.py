@@ -17,9 +17,9 @@ class Visualizer:
 
         wordcloud = WordCloud(width=800, height=400, background_color='white', colormap='viridis', max_words=50).generate_from_frequencies(freq_dict)
 
-        picture, axex = plt.subplots(picsize=(10, 5))
-        axex.imshow(wordcloud, interpolation='bilinear')
-        axex.axis('off')
+        picture, axes = plt.subplots(figsize=(10, 5))
+        axes.imshow(wordcloud, interpolation='bilinear')
+        axes.axis('off')
 
         buf = BytesIO()
         plt.savefig(buf, format='png', bbox_inches='tight')
@@ -52,7 +52,7 @@ class Visualizer:
         
         types_ent = {}
         for ent in entities:
-            type_e = ent['type']
+            type_e = ent['label']
             types_ent[type_e] = types_ent.get(type_e, 0) + 1
         
         if not types_ent:

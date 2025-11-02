@@ -30,7 +30,7 @@ class DocumentProcessing:
     def pdf_extractor (self, path_file):
         
         content = ""
-        with open (path_file, "r", encoding="utf-8") as f:
+        with open (path_file, "rb") as f:
             pdf_reader = PyPDF2.PdfReader(f)
             for page in pdf_reader.pages:
                 content += page.extract_text() + "\n" #ISSO DE extract_text É DESSA BIBLIOTECA?
@@ -42,6 +42,7 @@ class DocumentProcessing:
         content = ""
         for paragraph in doc.paragraphs:
             content += paragraph.text + "\n"
+        return content
     
     def txt_extractor(self, path_file):
         with open(path_file, "r", encoding="utf-8") as f:

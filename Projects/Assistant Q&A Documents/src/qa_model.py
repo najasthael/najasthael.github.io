@@ -31,7 +31,7 @@ class QAModel:
 
         if start > 0:
             context_extension = "..." + context_extension
-        if end < len(texte):
+        if end < len(context):
             context_extension = context_extension + "..."
         
         return context_extension

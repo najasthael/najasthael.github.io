@@ -22,8 +22,8 @@ class TextAnalyzer:
             nb_sents += 1
 
 
-        entities = self.entities_extraction(doc),
-        words_frequency = self.get_words_frequency (doc, top_n=20),
+        entities = self.entities_extraction(doc)
+        words_frequency = self.get_words_frequency (doc, top_n=20)
         pos_tags = self.get_pos_distribution(doc)
 
 
@@ -40,7 +40,7 @@ class TextAnalyzer:
     
     def entities_extraction (self, doc):
         entities = []
-        for ent in doc.entities:
+        for ent in doc.ents:
             entities.append({
                 "text": ent.text,
                 "label": ent.label_,
@@ -51,7 +51,7 @@ class TextAnalyzer:
     
 
     def get_words_frequency (self, doc, top_n=20):
-        words =[]
+        words.append()
         for token in doc:
             if not token.is_stop and not token.is_punct and not token.is_space and len(token.text) > 2:
                 words = [token.text.lower()]
