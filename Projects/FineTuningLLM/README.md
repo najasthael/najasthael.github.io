@@ -201,7 +201,7 @@ Des évaluations ont été réalisées à partir de jeux de données de tailles 
 | test3.txt | 143         | 79,7 %   | Mauvaise détection de la classe minoritaire                                                                                          |
 | test4.txt | 145         | 71,7 %   | F1-score élevé sur la classe majoritaire uniquement                                                                                  |
 | test5.txt | 180         | 43 %     | Très bon rappel pour "non gouvernemental", mais faible performance globale                                                           |
-| test6.txt | 180         | 67,8 %   | Accuracy final assez satisfaisante, avec une tendance pour la classe "gouvernemental", mais pouvant s'améliorer avec plus de données |
+| test6.txt | 180         | 67,8 %   | Accuracy final, avec une tendance pour la classe "gouvernemental", pouvant s'améliorer avec plus de données |
 
 ## Des améliorations pour le futur
 
